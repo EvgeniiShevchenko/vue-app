@@ -45,8 +45,10 @@ export default {
       this.setParams();
     });
 
+    this.setParams();
+
     this.$store.watch(
-      (state, geters) => geters["workPage/pending"],
+      (state, geters) => geters["sidebar"],
       (newValue, oldValue) => {
         setTimeout(() => {
           this.setParams();
