@@ -1,20 +1,66 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <SideBar />
     <router-view />
   </div>
 </template>
+
+<script>
+import SideBar from "./components/layouts/TheSideBar";
+import "./../node_modules/slick-carousel/slick/slick.css";
+import "./../node_modules/slick-carousel/slick/slick-theme.css";
+export default {
+  name: "app",
+  components: {
+    SideBar
+  },
+  mounted: function() {
+    this.$store.dispatch("getUnsplashPhotos", "30");
+  }
+};
+</script>
 
 <style lang="scss">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  margin: 0;
   color: #2c3e50;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+.body {
+  margin: 0;
+}
+
+.has-show-sidebar {
+  margin-left: 300px;
+  width: calc(100% - 300px);
+  transition: 1s all;
+}
+
+.has-hide-sidebar {
+  margin-left: 0;
+  width: 100%;
+  transition: 1s all;
+}
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 #nav {
