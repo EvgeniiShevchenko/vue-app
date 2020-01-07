@@ -18,7 +18,7 @@
       </li>
       <li class="info-list-item">
         <span class="item-icon-coments"></span>
-        {{data.Commented}}
+        {{data.Comments.length}}
         Coments
       </li>
     </ul>

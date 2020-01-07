@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="container" :style="margin"> -->
   <div :class="margin">
     <base-loader class="preloader" v-if="data.length === 0" />
     <div v-else ref="content" class="wrapper">
@@ -15,7 +14,7 @@
         <section class="about-detail-skills">
           <h3 class="detail-skills-title">Our Skills</h3>
           <ul class="detail-skills-list">
-            <li class="detail-skills-item" :key="index" v-for="(item, index) in data[0].Skils">
+            <li class="detail-skills-item" :key="index" v-for="(item, index) in data[0].Skills">
               <div class="skills-item-wrapper">
                 <p class="skills-item-descriptions">{{item.NameScill}}</p>
                 <p class="skills-item-descriptions">{{item.LevelOfOwnership}}%</p>
