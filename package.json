@@ -19,7 +19,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "@types/unsplash-js": "^6.0.1",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "bson": "^4.0.2",
     "core-js": "^3.4.3",
